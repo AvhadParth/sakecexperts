@@ -1,0 +1,48 @@
+[
+  {
+    "id": "1759244920086",
+    "slug": "factmatrix-1759244920086",
+    "title": "FactMatrix",
+    "summary": "A news detector",
+    "description": "FactMatrix is a Real Time AI/ML based fact detection system created to detect facts as fake or true. ",
+    "domains": [
+      "IT",
+      "AIDS"
+    ],
+    "techStack": [
+      "Python",
+      "ReactJS"
+    ],
+    "skills": [],
+    "difficulty": "Intermediate",
+    "cohortYear": 2025,
+    "teamMembers": [],
+    "guide": null,
+    "repoUrl": "",
+    "demoUrl": "",
+    "abstractPdfUrl": "",
+    "posterUrl": "",
+    "datasetLinks": [],
+    "bom": [],
+    "steps": [
+      "Install Python and run the Start command"
+    ],
+    "license": "",
+    "reproducibilityScore": 0,
+    "reproducibilityBadge": "Bronze",
+    "ethicsChecklist": {
+      "privacy": false,
+      "licenseOK": false,
+      "dataProvenance": false
+    },
+    "tags": [],
+    "status": "pending",
+    "views": 0,
+    "bookmarksCount": 0,
+    "upvotes": 0,
+    "featured": false,
+    "createdBy": "1759244800014",
+    "createdAt": "2025-09-30T15:08:40.086Z",
+    "updatedAt": "2025-09-30T15:08:40.086Z"
+  }
+]

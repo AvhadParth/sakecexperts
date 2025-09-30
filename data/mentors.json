@@ -1,0 +1,29 @@
+[
+  {
+    "id": "1759248397112",
+    "userId": "1759244800014",
+    "name": "Parth Avhad",
+    "department": "IT",
+    "bio": "FrontEnd Developer",
+    "expertise": [
+      "IT",
+      "CE",
+      "CyberSec",
+      "AIDS",
+      "EXTC",
+      "VLSI",
+      "ACT"
+    ],
+    "meetingLink": "https://meet.google.com/mdz-zpey-wbv",
+    "officeHours": [
+      {
+        "day": 5,
+        "start": "17:00",
+        "end": "18:00",
+        "slotMinutes": 30
+      }
+    ],
+    "createdAt": "2025-09-30T16:06:37.110Z",
+    "updatedAt": "2025-09-30T18:15:36.697Z"
+  }
+]

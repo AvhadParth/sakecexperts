@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1759248549888",
+    "mentorId": "1759244800014",
+    "mentorName": "Parth Avhad",
+    "menteeId": "1759244800014",
+    "menteeName": "Parth Avhad",
+    "slotId": "2025-10-26T12:15:00.000Z_2025-10-26T12:30:00.000Z",
+    "startISO": "2025-10-26T12:15:00.000Z",
+    "endISO": "2025-10-26T12:30:00.000Z",
+    "status": "confirmed",
+    "createdAt": "2025-09-30T16:09:09.888Z"
+  },
+  {
+    "id": "1759248550629",
+    "mentorId": "1759244800014",
+    "mentorName": "Parth Avhad",
+    "menteeId": "1759244800014",
+    "menteeName": "Parth Avhad",
+    "slotId": "2025-10-12T11:30:00.000Z_2025-10-12T11:45:00.000Z",
+    "startISO": "2025-10-12T11:30:00.000Z",
+    "endISO": "2025-10-12T11:45:00.000Z",
+    "status": "confirmed",
+    "createdAt": "2025-09-30T16:09:10.629Z"
+  }
+]

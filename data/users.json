@@ -1,0 +1,24 @@
+[
+  {
+    "id": "1759244800014",
+    "name": "Parth",
+    "email": "parth.avhad18436@sakec.ac.in",
+    "studentId": "18436",
+    "department": "IT",
+    "year": "alumni",
+    "role": "contributor",
+    "verified": true,
+    "lastOtpSentAt": 1759256185425
+  },
+  {
+    "id": "1759255689989",
+    "name": "Rutuja Andhale",
+    "email": "rutuja.andhale16870@sakec.ac.in",
+    "studentId": "16870",
+    "department": "CE",
+    "year": "4",
+    "role": "explorer",
+    "verified": true,
+    "lastOtpSentAt": 1759255689989
+  }
+]
