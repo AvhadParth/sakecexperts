@@ -1,14 +1,16 @@
 [
   {
     "id": "1759244800014",
-    "name": "Parth",
+    "name": "Parth Avhad",
     "email": "parth.avhad18436@sakec.ac.in",
-    "studentId": "18436",
+    "studentId": "1",
     "department": "IT",
-    "year": "alumni",
-    "role": "contributor",
-    "verified": true,
-    "lastOtpSentAt": 1759256185425
+    "year": "1",
+    "role": "explorer",
+    "verified": false,
+    "lastOtpSentAt": 1759262026464,
+    "otp": "491844",
+    "otpExpiresAt": 1759262326464
   },
   {
     "id": "1759255689989",
@@ -20,5 +22,16 @@
     "role": "explorer",
     "verified": true,
     "lastOtpSentAt": 1759255689989
+  },
+  {
+    "id": "1759773775617",
+    "name": "Vivaan Jain",
+    "email": "vivaan.18256@sakec.ac.in",
+    "studentId": "18256",
+    "department": "IT",
+    "year": "3",
+    "role": "contributor",
+    "verified": true,
+    "lastOtpSentAt": 1759773775616
   }
 ]

@@ -1,27 +1,41 @@
+// src/lib/mailer.js
 import nodemailer from "nodemailer";
 
 function getTransporter() {
   const host = process.env.SMTP_HOST;
   const port = Number(process.env.SMTP_PORT || 587);
-  const secure = String(process.env.SMTP_SECURE || "false") === "true";
+  // If port is 465 -> secure true. Allow override with SMTP_SECURE env.
+  const secure = (port === 465) || (String(process.env.SMTP_SECURE || "false") === "true");
   const user = process.env.SMTP_USER;
   const pass = process.env.SMTP_PASS;
 
   if (!host || !user || !pass) {
-    console.warn("[MAILER] Missing SMTP env. Using DEV fallback (console log).");
+    console.warn("[MAILER] Missing SMTP env vars. Falling back to DEV (console log).");
     return null;
   }
 
   console.log("[MAILER] Creating transporter", {
-    host, port, secure, user: user ? user.slice(0, 4) + "****" : "none"
+    host,
+    port,
+    secure,
+    user: user ? `${user.slice(0,4)}****@` : "none",
+    debugMode: !!process.env.SMTP_DEBUG_INSECURE
   });
 
-  return nodemailer.createTransport({
+  const transportOptions = {
     host,
     port,
     secure,
     auth: { user, pass },
-  });
+  };
+
+  // optional debugging to bypass certificate validation (ONLY for debugging)
+  if (String(process.env.SMTP_DEBUG_INSECURE || "false") === "true") {
+    transportOptions.tls = { rejectUnauthorized: false };
+    console.warn("[MAILER] WARNING: SMTP_DEBUG_INSECURE is enabled — using tls.rejectUnauthorized=false");
+  }
+
+  return nodemailer.createTransport(transportOptions);
 }
 
 export async function sendOtpEmail({ toEmail, toName, otp }) {
@@ -54,11 +68,13 @@ export async function sendOtpEmail({ toEmail, toName, otp }) {
   }
 
   try {
+    // verify gives earlier, clearer error messages (auth/conn issues)
     await transporter.verify();
     console.log("[MAILER] Transport verified");
-  } catch (e) {
-    console.error("[MAILER] Transport verify failed:", e?.message || e);
-    throw e;
+  } catch (verifyErr) {
+    console.error("[MAILER] Transport verify failed:", verifyErr && (verifyErr.message || verifyErr));
+    // include the real error so the test route can return it
+    throw new Error("Transport verify failed: " + (verifyErr && (verifyErr.message || verifyErr)));
   }
 
   try {
@@ -70,8 +86,8 @@ export async function sendOtpEmail({ toEmail, toName, otp }) {
     });
     console.log("[MAILER] Sent:", info.messageId);
     return { dev: false, id: info.messageId };
-  } catch (e) {
-    console.error("[MAILER] sendMail failed:", e?.message || e);
-    throw e;
+  } catch (sendErr) {
+    console.error("[MAILER] sendMail failed:", sendErr && (sendErr.message || sendErr));
+    throw new Error("sendMail failed: " + (sendErr && (sendErr.message || sendErr)));
   }
 }

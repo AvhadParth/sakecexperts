@@ -1,15 +1,29 @@
-export const metadata = { title: "SakecExperts", description: "Explore & upload college projects" };
-
 import "./globals.css";
-import Navbar from "@/components/Navbar";
+
+export const metadata = {
+  title: "SakecExperts",
+  description: "Project Explorer & Mentorship Platform",
+};
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
-        <Navbar />
-        <div className="container">{children}</div>
-      </body>
+      <head>
+        <link
+          rel="preconnect"
+          href="https://fonts.googleapis.com"
+        />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="true"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@300;400;600;700&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <body>{children}</body>
     </html>
   );
 }

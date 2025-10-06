@@ -44,5 +44,50 @@
     "createdBy": "1759244800014",
     "createdAt": "2025-09-30T15:08:40.086Z",
     "updatedAt": "2025-09-30T15:08:40.086Z"
+  },
+  {
+    "id": "1759773972084",
+    "slug": "steganography-image-generator-1759773972083",
+    "title": "Steganography Image Generator",
+    "summary": "Cryptography and Network Security Micro-Project",
+    "description": "A Steganography is type of Image, audio, video generator that changes the smallest bits of the image/video/audio and inserts a data that is encrypted by sender and decrypted by receiver by LSB-XOR technique",
+    "domains": [
+      "IT",
+      "CyberSec",
+      "CE"
+    ],
+    "techStack": [
+      "Python",
+      "Streamlit"
+    ],
+    "skills": [],
+    "difficulty": "Intermediate",
+    "cohortYear": 2025,
+    "teamMembers": [],
+    "guide": null,
+    "repoUrl": "https://github.com/AvhadParth/Parth",
+    "demoUrl": "",
+    "abstractPdfUrl": "",
+    "posterUrl": "",
+    "datasetLinks": [],
+    "bom": [],
+    "steps": [],
+    "license": "",
+    "reproducibilityScore": 20,
+    "reproducibilityBadge": "Bronze",
+    "ethicsChecklist": {
+      "privacy": false,
+      "licenseOK": false,
+      "dataProvenance": false
+    },
+    "tags": [],
+    "status": "pending",
+    "views": 0,
+    "bookmarksCount": 0,
+    "upvotes": 0,
+    "featured": false,
+    "createdBy": "1759773775617",
+    "createdAt": "2025-10-06T18:06:12.083Z",
+    "updatedAt": "2025-10-06T18:06:12.083Z"
   }
 ]

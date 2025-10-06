@@ -9,6 +9,7 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@sendinblue/client": "^3.3.1",
     "jsonwebtoken": "^9.0.2",
     "next": "15.5.4",
     "nodemailer": "^7.0.6",
@@ -23,5 +24,4 @@
   "engines": {
     "node": ">=18.17.0"
   }
-
 }
